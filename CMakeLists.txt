@@ -7,4 +7,4 @@ link_directories(E:\\SDK\\boost\\lib)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(EasyPM main.cpp src/Game.cpp src/Game.h)
+add_executable(EasyPM main.cpp src/Game.cpp src/Game.h src/Map.cpp src/Map.h src/Unit.cpp src/Unit.h src/Player.cpp src/Player.h src/Npc.cpp src/Npc.h)
