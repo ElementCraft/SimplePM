@@ -7,7 +7,7 @@
 // 初始化
 void Game::init() const
 {
-
+    Map::get_mutable_instance().loadArea(1);
 }
 
 // 处理用户操作

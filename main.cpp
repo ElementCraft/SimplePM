@@ -8,6 +8,5 @@ int main()
     Game::get_const_instance().cmd();
     Game::get_const_instance().stop();
 
-    std::cout << 123 << std::endl;
     return 0;
 }

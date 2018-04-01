@@ -6,6 +6,7 @@
 #define EASYPM_GAME_H
 
 #include <boost/serialization/singleton.hpp>
+#include "Map.h"
 
 class Game
     : public boost::serialization::singleton<Game>
