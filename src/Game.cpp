@@ -8,6 +8,8 @@
 void Game::init() const
 {
     Map::get_mutable_instance().loadArea(1);
+    Map::get_mutable_instance().render(1);
+
 }
 
 // 处理用户操作

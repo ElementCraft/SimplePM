@@ -9,17 +9,30 @@
 #include <memory>
 #include <map>
 #include "Area.h"
+#include "Screen.h"
 
 class Map
         : public boost::serialization::singleton<Map>
 {
 public:
-    bool loadArea(int index);
-    bool unloadArea(int index);
+    bool loadArea(unsigned int index);
+    bool unloadArea(unsigned int index);
+
+    void render();
+    void render(unsigned int index);
+
+    ScreenCell* tile2ScreenCell(std::shared_ptr<Tile> tile, unsigned int x, unsigned int y);
 
 private:
+    typedef std::pair<unsigned int, std::shared_ptr<Area>> pair_map;
+
     // 保存所有区域信息的map
-    std::map<int, std::shared_ptr<Area>> m_mapAreas;
+    std::map<unsigned int, std::shared_ptr<Area>> m_mapAreas;
+
+    /**
+     * 当前区域
+     */
+    unsigned int m_nCurrentAreaIndex;
 };
 
 
